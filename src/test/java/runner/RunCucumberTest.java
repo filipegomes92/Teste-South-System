@@ -5,9 +5,12 @@ import cucumber.api.junit.Cucumber;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+
+import java.util.HashMap;
 
 
 @RunWith(Cucumber.class)
@@ -43,8 +46,8 @@ public class RunCucumberTest {
         driver = new ChromeDriver(options);
 
         Point point = new Point(-1000, 0);
-        String baseUrl = System.getProperty("testUrl");
-        driver.get(baseUrl);
+        String baseUrl = System.getProperty("https://blogdoagi.com.br/");
+        driver.get("https://blogdoagi.com.br/");
     }
 
     @AfterClass
