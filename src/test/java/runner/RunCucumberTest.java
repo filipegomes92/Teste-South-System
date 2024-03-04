@@ -7,6 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 
 @RunWith(Cucumber.class)
@@ -23,6 +24,10 @@ public class RunCucumberTest {
 
     @BeforeClass
     public static void abreNavegador(){
+
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless");
+        driver = new ChromeDriver(chromeOptions);
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
