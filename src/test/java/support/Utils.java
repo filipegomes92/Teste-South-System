@@ -6,6 +6,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import runner.RunCucumberTest;
 
+import java.util.Objects;
+
 
 public class Utils extends RunCucumberTest {
 
@@ -14,5 +16,6 @@ public class Utils extends RunCucumberTest {
         WebDriverWait wait = new WebDriverWait(driver, tempo);
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
+
 
 }

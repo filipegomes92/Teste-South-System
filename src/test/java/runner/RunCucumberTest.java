@@ -24,11 +24,8 @@ public class RunCucumberTest {
 
     @BeforeClass
     public static void abreNavegador(){
-
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--headless");
-        driver = new ChromeDriver(chromeOptions);
-        //driver = new ChromeDriver();
+        
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
     @AfterClass
